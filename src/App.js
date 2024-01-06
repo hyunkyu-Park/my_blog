@@ -6,7 +6,7 @@ function App() {
 
   let post = '역삼 우동 맛집'
   let [titles, setTitles] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']);
-  let [like, setlike] = useState(0);
+  let [like, setlike] = useState([0, 0, 0]);
   let [modal, setModal] = useState(false);
   
   return (
@@ -27,7 +27,7 @@ function App() {
         setTitles(copy)
       }}>가나다순 정렬</button>
 
-      <div className="list"> 
+      {/* <div className="list"> 
         <h4>{titles[0]} <span onClick={() => { setlike(like++) }}>👍</span> {like}  </h4>
         <p>1월 1일 발행</p>
       </div>
@@ -41,7 +41,24 @@ function App() {
       }}> 
         <h4>{titles[2]}</h4>
         <p>1월 3일 발행</p>
-      </div>
+      </div> */}
+
+      {
+        titles.map(function(t, i){
+          return (
+          <div className="list" key={i}> 
+            <h4 onClick={ () => {setModal(!modal)}}> {t} 
+              <span onClick={() => {
+                let copy = [...like]
+                copy[i]++
+                setlike(copy) }}> 👍 
+              </span> { like[i] } 
+            </h4>
+            <p>1월 2일 발행</p>
+          </div>
+          )
+        })
+      }
 
       {
         modal == true ? <Modal></Modal> : null
