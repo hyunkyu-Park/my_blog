@@ -18,10 +18,20 @@ div{
   text-align: left;
 }
 
+.language{
+  position: absolute; /* 절대 위치 지정 */
+  top: 3%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
+  right: -1%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
+  color: darkgreen; /* 텍스트 색상 설정 */
+  font-weight: bold;
+  font-size: 20px; /* 텍스트 크기 설정, 필요에 따라 조절 */
+  background: transparent;
+}
 
 .overlay-text3 {
   position: absolute; /* 절대 위치 지정 */
-  top: 40%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
+  top: 37%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
   left: 50%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
   transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
   color: thistle; /* 텍스트 색상 설정 */
@@ -34,7 +44,7 @@ div{
   top: 30%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
   left: 50%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
   transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
-  color: white; /* 텍스트 색상 설정 */
+  color: ivory; /* 텍스트 색상 설정 */
   font-size: 48px; /* 텍스트 크기 설정, 필요에 따라 조절 */
   text-align: center; /* 가운데 정렬 */
 }
@@ -44,7 +54,7 @@ div{
   top: 3%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
   left: 5%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
   transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
-  color: white; /* 텍스트 색상 설정 */
+  color: ivory; /* 텍스트 색상 설정 */
   font-size: 18px; /* 텍스트 크기 설정, 필요에 따라 조절 */
   text-align: center; /* 가운데 정렬 */
 }

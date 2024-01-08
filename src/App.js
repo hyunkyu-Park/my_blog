@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
 import { useState } from 'react';
 import background from './background.jpg'
+
+import { Button } from 'react-bootstrap';
 
 function App() {
 
@@ -14,12 +15,14 @@ function App() {
   
   return (
     <div className="App">
+      
+
       <div className="image-container">
         <img src={background} alt="blog img" width={200} className='custom-image'/>
         <h1 className="overlay-text1">Kyu Blog</h1>
         <h1 className="overlay-text2">Compass</h1>
         <h1 className="overlay-text3">My thoughts will point me in the direction</h1>
-        
+        <span className='language'>English</span>
       </div>
 
       {/* <button onClick={() => {
@@ -63,7 +66,7 @@ function App() {
               </span> { like[i] } 
             </h4>
             <p>1월 2일 발행 </p>
-            <button onClick={()=>{
+            <Button variant="secondary" onClick={()=>{
               let titlesCopy = [...titles]
               titlesCopy.splice(i, 1);
               setTitles(titlesCopy);
@@ -72,7 +75,17 @@ function App() {
               likesCopy.splice(i, 1);
               setlike(likesCopy);
 
-            }}>삭제</button>
+            }}>삭제</Button>
+            {/* <button onClick={()=>{
+              let titlesCopy = [...titles]
+              titlesCopy.splice(i, 1);
+              setTitles(titlesCopy);
+
+              let likesCopy = [...like];
+              likesCopy.splice(i, 1);
+              setlike(likesCopy);
+
+            }}>삭제</button> */}
             
           </div>
           )
