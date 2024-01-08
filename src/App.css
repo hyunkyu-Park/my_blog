@@ -18,12 +18,49 @@ div{
   text-align: left;
 }
 
-.black-nav{
+
+.overlay-text3 {
+  position: absolute; /* 절대 위치 지정 */
+  top: 40%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
+  left: 50%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
+  color: thistle; /* 텍스트 색상 설정 */
+  font-size: 24px; /* 텍스트 크기 설정, 필요에 따라 조절 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.overlay-text2 {
+  position: absolute; /* 절대 위치 지정 */
+  top: 30%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
+  left: 50%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
+  color: white; /* 텍스트 색상 설정 */
+  font-size: 48px; /* 텍스트 크기 설정, 필요에 따라 조절 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.overlay-text1 {
+  position: absolute; /* 절대 위치 지정 */
+  top: 3%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
+  left: 5%; /* 부모 요소의 중앙을 기준으로 수평 정렬 */
+  transform: translate(-50%, -50%); /* 중앙 정렬을 위한 변형 */
+  color: white; /* 텍스트 색상 설정 */
+  font-size: 18px; /* 텍스트 크기 설정, 필요에 따라 조절 */
+  text-align: center; /* 가운데 정렬 */
+}
+
+.image-container {
+  width: 100%; /* 원하는 너비로 설정 */
+  height: 500px; /* 원하는 높이로 설정 */
+  overflow: hidden; /* 넘치는 부분을 숨기기 위해 사용 */
   display: flex;
-  background: black;
-  width: 100%;
-  color: white;
-  padding-left: 20px;
+}
+
+.custom-image {
+  width: 100%; /* 부모 요소의 크기에 맞추어 이미지 너비 조정 */
+  height: auto; /* 비율에 맞게 자동으로 높이 설정 */
+  object-fit: cover;
+  object-position: center;
 }
 
 .App-logo {
