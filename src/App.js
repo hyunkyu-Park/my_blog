@@ -6,13 +6,6 @@ import { Button } from 'react-bootstrap';
 
 function App() {
 
-
-  let [titles, setTitles] = useState(['남자 코트 추천', '강남 우동 맛집', '파이썬 독학']);
-  let [like, setlike] = useState([0, 0, 0]);
-  let [modal, setModal] = useState(false);
-  let [post, setPost] = useState(0)
-  let [input, setInput] = useState('')
-  
   return (
     <div className="App">
       
@@ -25,96 +18,18 @@ function App() {
         <span className='language'>English</span>
       </div>
 
-      {/* <button onClick={() => {
-        let copy = [...titles];
-        copy[0] = '여자 코트 추천';
-        setTitles(copy);
-      }}>성별 바꾸기</button>
-
-      <button onClick={() => {
-        let copy = [...titles];
-        copy.sort();
-        setTitles(copy)
-      }}>가나다순 정렬</button> */}
-
-      {/* <div className="list"> 
-        <h4>{titles[0]} <span onClick={() => { setlike(like++) }}>👍</span> {like}  </h4>
-        <p>1월 1일 발행</p>
+      <div className='postWrapper'>
+        <h1 className='postTitle'>첫 번째 포스트는 이런 방식으로 작성될 예정입니다</h1>
+        <p className='postDates'>Jan 9, 2024</p>
+        <p className='content-preview'>포스트 제목 아래 이런식으로 각 포스트의 처음 문단 일부를 잘라서 미리보기로 둘 예정입니다. 각 포스트는
+        화면 기준 중앙이 아니라 좌측에 둘 예정이고, 미리보기의 글자는 회색 계열로 할 예정입니다. 페이지의 우측 부분은 개인 깃허브 프로필과 
+        목차를 둘 예정입니다.</p>
+        <div>
+          <a href='태그'></a>
+        </div>
       </div>
-      <div className="list"> 
-        <h4>{titles[1]} <span>👍</span> 0 </h4>
-        <p>1월 2일 발행</p>
-      </div>
-      <div className="list" onClick={ () => {
-        setModal(!modal)
-        // modal == false ? setModal(true) : setModal(false)
-      }}> 
-        <h4>{titles[2]}</h4>
-        <p>1월 3일 발행</p>
-      </div> */}
 
-      {
-        titles.map(function(t, i){
-          return (
-          <div className="list" key={i}> 
-            <h4 onClick={ () => {setModal(!modal); setPost(i)}}> {t} 
-              <span onClick={(e) => {
-                e.stopPropagation();
-                let copy = [...like]
-                copy[i]++
-                setlike(copy) }}> 👍 
-              </span> { like[i] } 
-            </h4>
-            <p>1월 2일 발행 </p>
-            <Button variant="secondary" onClick={()=>{
-              let titlesCopy = [...titles]
-              titlesCopy.splice(i, 1);
-              setTitles(titlesCopy);
-
-              let likesCopy = [...like];
-              likesCopy.splice(i, 1);
-              setlike(likesCopy);
-
-            }}>삭제</Button>
-            {/* <button onClick={()=>{
-              let titlesCopy = [...titles]
-              titlesCopy.splice(i, 1);
-              setTitles(titlesCopy);
-
-              let likesCopy = [...like];
-              likesCopy.splice(i, 1);
-              setlike(likesCopy);
-
-            }}>삭제</button> */}
-            
-          </div>
-          )
-        })
-      }
-
-      {
-        modal == true 
-        ? <Modal titles = {titles} post = {post} setTitles = {setTitles}></Modal> 
-        : null
-      }
-
-      <input onChange={(e) => {
-        setInput(e.target.value);
-      }}></input>
-      <button onClick={() => {
-        //만약 input이 비어 있으면 버튼 작동 x
-        if (input.trim() !== '') {
-          let copy = [...titles];
-          copy.unshift(input);
-          setTitles(copy);
-
-          let likesCopy = [...like];
-          likesCopy.unshift(0);
-          setlike(likesCopy);
-
-          setInput('');
-        }
-      }}>포스트</button>
+      
 
     </div>
   );

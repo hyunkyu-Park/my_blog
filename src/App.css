@@ -18,6 +18,10 @@ div{
   text-align: left;
 }
 
+.postWrapper{
+  padding-right: 5%;
+}
+
 .language{
   position: absolute; /* 절대 위치 지정 */
   top: 3%; /* 부모 요소의 중앙을 기준으로 수직 정렬 */
